@@ -61,47 +61,56 @@ public class HospitalTest extends TestCase {
 		testPatient.checkPulse();
 		assertEquals(true, testPatient.feelsCaredFor());
 	}
-//
-//	/* Doctors work on their Patients */
-//	public void testDoctorsWork() throws Exception {
-//		Doctor testDoctor = new GeneralPractitioner();
-//		Patient max = new Patient();
-//		Patient macky = new Patient();
-//		testDoctor.assignPatient(max);
-//		testDoctor.assignPatient(macky);
-//		assertEquals(false, max.feelsCaredFor());
-//		assertEquals(false, macky.feelsCaredFor());
-//		testDoctor.doMedicine();
-//		assertEquals(true, max.feelsCaredFor());
-//		assertEquals(true, macky.feelsCaredFor());
-//	}
-//
-//	/* test calling assignPatient when doctor is full throws exception */
-//	public void testDoctorsCanOnlyHandle3Patients() throws Exception {
-//		Doctor testDoctor = new Doctor();
-//		testDoctor.assignPatient(new Patient());
-//		testDoctor.assignPatient(new Patient());
-//		testDoctor.assignPatient(new Patient());
-//		try {
-//			testDoctor.assignPatient(new Patient());
-//			assertTrue(false);
-//		} catch (DoctorFullException dfe) {
-//			assertTrue(true);
-//		}
-//	}
-//
-//	public void test8Patients() throws Exception {
-//		// TODO: add 3 doctors to hospital
-//
-//		// TODO: add 8 patients to hospital
-//
-//		// hospital assigns patients to doctors
-//		testHospital.assignPatientsToDoctors();
-//		// hospital.getDoctors shows doctors have 3, 3, 2 patients
-//		List<Doctor> testDoctors = testHospital.getDoctors();
-//		assertEquals(3, testDoctors.get(0).getPatients().size());
-//		assertEquals(3, testDoctors.get(1).getPatients().size());
-//		assertEquals(2, testDoctors.get(2).getPatients().size());
-//	}
+
+	/* Doctors work on their Patients */
+	public void testDoctorsWork() throws Exception {
+		Doctor testDoctor = new GeneralPractitioner();
+		Patient max = new Patient();
+		Patient macky = new Patient();
+		testDoctor.assignPatient(max);
+		testDoctor.assignPatient(macky);
+		assertEquals(false, max.feelsCaredFor());
+		assertEquals(false, macky.feelsCaredFor());
+		testDoctor.doMedicine();
+		assertEquals(true, max.feelsCaredFor());
+		assertEquals(true, macky.feelsCaredFor());
+	}
+
+	/* test calling assignPatient when doctor is full throws exception */
+	public void testDoctorsCanOnlyHandle3Patients() throws Exception {
+		Doctor testDoctor = new Doctor();
+		testDoctor.assignPatient(new Patient());
+		testDoctor.assignPatient(new Patient());
+		testDoctor.assignPatient(new Patient());
+		try {
+			testDoctor.assignPatient(new Patient());
+			assertTrue(false);
+		} catch (DoctorFullException dfe) {
+			assertTrue(true);
+		}
+	}
+
+	public void test8Patients() throws Exception {
+		// add 3 doctors to hospital
+		testHospital.addDoctor(new GeneralPractitioner());
+		testHospital.addDoctor(new GeneralPractitioner());
+		testHospital.addDoctor(new Surgeon());
+		// add 8 patients to hospital
+		testHospital.addPatient(new Patient());
+		testHospital.addPatient(new Patient());
+		testHospital.addPatient(new Patient());
+		testHospital.addPatient(new Patient());
+		testHospital.addPatient(new Patient());
+		testHospital.addPatient(new Patient());
+		testHospital.addPatient(new Patient());
+		testHospital.addPatient(new Patient());
+		// hospital assigns patients to doctors
+		testHospital.assignPatientsToDoctors();
+		// hospital.getDoctors shows doctors have 3, 3, 2 patients
+		List<Doctor> testDoctors = testHospital.getDoctors();
+		assertEquals(3, testDoctors.get(0).getPatients().size());
+		assertEquals(3, testDoctors.get(1).getPatients().size());
+		assertEquals(2, testDoctors.get(2).getPatients().size());
+	}
 
 }

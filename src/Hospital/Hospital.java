@@ -1,6 +1,7 @@
 package Hospital;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Hospital {
 	ArrayList<Doctor> doctors = new ArrayList<Doctor>();
@@ -20,5 +21,19 @@ public class Hospital {
 
 	public ArrayList<Patient> getPatients() {
 		return patients;
+	}
+
+	public void assignPatientsToDoctors() {
+
+		for (Patient patient : patients) {
+			for (Doctor doctor : doctors) {
+				try {
+					doctor.assignPatient(patient);
+					break;
+				} catch (DoctorFullException e) {
+					// TODO: handle exception
+				}
+			}
+		}
 	}
 }
