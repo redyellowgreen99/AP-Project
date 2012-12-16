@@ -10,6 +10,13 @@ public class Hospital {
 	public void addDoctor(Doctor doctorNeglia) {
 		doctors.add(doctorNeglia);
 	}
+	
+	public void add(Object object) {
+		if(object instanceof Doctor)
+		{
+			//Add doctors to doctorList and patients to patientList
+		}
+	}
 
 	public void addPatient(Patient alexBaratti) {
 		patients.add(alexBaratti);
