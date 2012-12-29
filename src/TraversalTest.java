@@ -37,10 +37,10 @@ public class TraversalTest extends TestCase {
 
 	public void testTraverseList2() throws Exception {
 		ArrayList<String> testList = new ArrayList<String>();
-		testList.add("never");
+		testList.add("always");
 		testList.add("say");
 		testList.add("never");
-		assertEquals("neversaynever", Traversals.arrayListToString(testList));
+		assertEquals("alwayssaynever", Traversals.arrayListToString(testList));
 	}
 
 	public void testMoreArrayListTraversals() {
@@ -59,40 +59,40 @@ public class TraversalTest extends TestCase {
 		assertEquals("gooseduck", Traversals.getAnimalNames(animals));
 	}
 
-	// /* practice:
-	// * twitter & processing
-	// * Person (name, height), print out smallest to tallest in class
-	// *
-	// * now solve these puzzles:
-	// * 1. use old school arrays -
-	// http://www.pythonchallenge.com/pc/def/map.html
-	// * 2. use an ArrayList - http://www.pythonchallenge.com/pc/def/ocr.html
-	// * /
+	 /* practice:
+	 * twitter & processing
+	 * Person (name, height), print out smallest to tallest in class
+	 *
+	 * now solve these puzzles:
+	 * 1. use old school arrays -
+	 http://www.pythonchallenge.com/pc/def/map.html
+	 * 2. use an ArrayList - http://www.pythonchallenge.com/pc/def/ocr.html
+	 */
 
-	// --------------------------------------------
-	//
-	//
-	// public void testSortAnArray() throws Exception {
-	// String[] testArray = { "concerned", "affected", "fascinated",
-	// "intrigued", "absorbed", "inquisitive", "nosy", "snoopy",
-	// "engrossed", "curious" };
-	// Sorting.sort(testArray);
-	// assertEquals("absorbed", testArray[0]);
-	// assertEquals("affected", testArray[1]);
-	// assertEquals("concerned", testArray[2]);
-	// assertEquals("curious", testArray[3]);
-	// assertEquals("engrossed", testArray[4]);
-	// assertEquals("fascinated", testArray[5]);
-	// assertEquals("snoopy", testArray[testArray.length]);
-	// }
 
-	// public void testInsertIntoArray() {
-	// int[] testArray = { 3, 6, 8, 3, 3, 2, 98 };
-	// Inserting.insertAt(testArray, 5);
-	// assertEquals(3, testArray[0]);
-	// assertEquals(3, testArray[5]);
-	// assertEquals(3, testArray[6]);
-	// }
+	
+	
+//	 public void testSortAnArray() throws Exception {
+//	 String[] testArray = { "concerned", "affected", "fascinated",
+//	 "intrigued", "absorbed", "inquisitive", "nosy", "snoopy",
+//	 "engrossed", "curious" };
+//	 testArray = Sorting.sort(testArray);
+//	 assertEquals("absorbed", testArray[0]);
+//	 assertEquals("affected", testArray[1]);
+//	 assertEquals("concerned", testArray[2]);
+//	 assertEquals("curious", testArray[3]);
+//	 assertEquals("engrossed", testArray[4]);
+//	 assertEquals("fascinated", testArray[5]);
+//	 assertEquals("snoopy", testArray[testArray.length]);
+//	 }
+
+	 public void testInsertIntoArray() {
+	 int[] testArray = { 3, 6, 8, 3, 3, 2, 98 };
+	 Inserting.insertAt(testArray, 5);
+	 assertEquals(3, testArray[0]);
+	 assertEquals(3, testArray[5]);
+	 assertEquals(3, testArray[6]);
+	 }
 	//
 	// public void testInsertInOrder() throws Exception {
 	// String[] orderedArray = { "concerned", "affected", "fascinated",
