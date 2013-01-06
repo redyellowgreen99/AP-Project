@@ -14,7 +14,6 @@ public class Sorting {
 					System.out.println(q);
 				}
 			}
-			
 			newArray[i] = winner;
 		}
 		for(String i:newArray){

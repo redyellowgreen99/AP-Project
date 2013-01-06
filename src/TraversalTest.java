@@ -86,13 +86,13 @@ public class TraversalTest extends TestCase {
 //	 assertEquals("snoopy", testArray[testArray.length]);
 //	 }
 
-	 public void testInsertIntoArray() {
-	 int[] testArray = { 3, 6, 8, 3, 3, 2, 98 };
-	 Inserting.insertAt(testArray, 5);
-	 assertEquals(3, testArray[0]);
-	 assertEquals(3, testArray[5]);
-	 assertEquals(3, testArray[6]);
-	 }
+//	 public void testInsertIntoArray() {
+//	 int[] testArray = { 3, 6, 8, 3, 3, 2, 98 };
+//	 Inserting.insertAt(testArray, 5);
+//	 assertEquals(3, testArray[0]);
+//	 assertEquals(3, testArray[5]);
+//	 assertEquals(3, testArray[6]);
+//	 }
 	//
 	// public void testInsertInOrder() throws Exception {
 	// String[] orderedArray = { "concerned", "affected", "fascinated",
