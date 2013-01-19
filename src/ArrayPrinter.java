@@ -15,12 +15,13 @@ public class ArrayPrinter {
 		System.out.println("It's dangerous to code alone. Compile this.");
 		for (int row = 0; row < Array.length; row++) {
 			for (int column = 0; column < Array[row].length; column++) {
-				System.out.println(Array[row][column] + "\t");
+				System.out.print(Array[row][column] + "\t");
 			}
+			System.out.println();
 		}
 	}
 
-	public static void printSTuff(String Array[][]) {
+	public static void sendToPrintingPress(String Array[][]) {
 		System.out.print("\n");
 		for (int i = 0; i < Array.length; i++) {
 			for (int j = 0; j < Array[i].length; j++) {
@@ -42,7 +43,7 @@ public class ArrayPrinter {
 				}
 			}
 		}
-		printSTuff(array);
+		sendToPrintingPress(array);
 	}
 
 	public static int index(int Array[][], int number) {
