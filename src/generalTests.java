@@ -19,6 +19,11 @@ public class generalTests {
 		assertEquals(3, testArray[1]);
 		assertEquals(4, testArray[2]);
 	}
+	
+	@Test
+	public void ceil() throws Exception {
+		System.out.println(Math.ceil(4.6 * 3));
+	}
 
 	
 }

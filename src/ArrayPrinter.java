@@ -2,11 +2,14 @@ public class ArrayPrinter {
 
 	public static void main(String[] args) {
 		int arrayList[][] = { { 1, 6, 7, 10, 17 }, { 7, 5, 4, 8 } };
-		int arrayList2[][] = { { 1, 6, 7, 10, 17 }, { 7, 5, 4, 8 } };
+		int arrayList2[][] = { { 1, 6, 7, 10, 17 }, { 7, 5, 4, 8, } };
 		int array[][] = { { 1, 2, 3 }, { 4, 5, 6 }, { 1, 3, 4 } };
 		printingPress(array);
 		index(arrayList, 7);
 		printingPress(7, 3, "W", "O");
+		printingPress(4, 4, "X", "O");
+		System.out.println("\nCrafting Table");
+		printingPress(5, 5, "X", "_");
 		equal(arrayList, arrayList2);
 		System.out.println(equal(arrayList, arrayList2));
 	}
@@ -67,6 +70,20 @@ public class ArrayPrinter {
 				}
 			}
 		}
+		if (Array1[0][0] != Array2[0][0]) {
+			return false;
+		}
 		return true;
+	}
+	
+	public static int countSuperHeroes(int Array[][], int height, int width, String cell1x1, String cell1x2, String cell1x3, String cell1x4, String cell2x1, String cell2x2, String cell2x3, String cell2x4, String cell3x1, String cell3x2, String cell3x3, String cell3x4, String cell4x1, String cell4x2, String cell4x3, String cell4x4) {
+		int numberOfHeroes = 0;
+		
+		for (int i = 0; i < Array.length; i++) {
+			for (int j = 0; j < Array[i].length; j++) {
+//				Array[i][j] = cell1x1;
+			}
+		}
+		return numberOfHeroes;
 	}
 }
