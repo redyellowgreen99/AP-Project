@@ -54,11 +54,13 @@ public class GreyImage {
 	public void processImage() {
 		for (int i = 0; i < pixelValues.length - 2; i++) {
 			for (int j = 0; j < pixelValues[i].length - 2; j++) {
-				int temp = pixelValues[i][j] - pixelValues[i + 2][j + 2];
-				if (temp < 0) {
-					temp = 0;
+				if (i + 2 < pixelValues.length && j + 2 < pixelValues[i].length) {
+					int temp = pixelValues[i][j] - pixelValues[i + 2][j + 2];
+					if (temp < 0) {
+						temp = 0;
+					}
+					pixelValues[i][j] = temp;
 				}
-				pixelValues[i][j] = temp;
 			}
 		}
 	}

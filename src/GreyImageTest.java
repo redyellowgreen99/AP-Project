@@ -48,6 +48,10 @@ public class GreyImageTest extends TestCase {
 		assertEquals(5, greyImage.countWhitePixels());
 	}
 
+	private static int[][] beforeCallToProcessImage = {
+			{ 221, 184, 178, 84, 135 }, { 84, 255, 255, 130, 84 },
+			{ 78, 255, 0, 0, 78 }, { 84, 130, 255, 130, 84 } };
+
 	private static int[][] afterCallToProcessImage = {
 			{ 221, 184, 100, 84, 135 }, { 0, 125, 171, 130, 84 },
 			{ 78, 255, 0, 0, 78 }, { 84, 130, 255, 130, 84 } };
@@ -61,13 +65,11 @@ public class GreyImageTest extends TestCase {
 				afterCallToProcessImage));
 	}
 
-	/* Implement exam question part (b) */
+	/* Attempt part (b) on paper, then implement it here. */
 
 	public void testPartB() throws Exception {
 
 		// set up
-
-		int[][] beforeCallToProcessImage = GreyImage.createTestArray();
 		GreyImage greyImage = new GreyImage();
 		greyImage.setPixelValues(beforeCallToProcessImage);
 
