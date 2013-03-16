@@ -52,5 +52,7 @@ public class generalTests {
 	    	String str2 = "Arcturan Megadonkey";
 	    	String str3 = "Sirius Cybernetics Corporation";
 	    	
+	    	Integer.parseInt(str3);
+	    	
 	    }
 	    }
